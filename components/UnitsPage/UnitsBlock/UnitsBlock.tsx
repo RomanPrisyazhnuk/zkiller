@@ -6,7 +6,7 @@ import UnitCard from './UnitCard';
 import { ArmyType } from '../../../models/Army';
 
 type TProps = {
-  getAuthors: () => void;
+  // getAuthors: () => void;
   army: ArmyType;
 };
 

@@ -22,7 +22,7 @@ const UnitsPage = (props: TProps): ReactElement => {
           <UnitsBlock army={user.army} />
         </ContentBlock>
       </ContentWrapper>
-      <Footer money={user.money}/>
+      <Footer user={user}/>
     </>
   );
 };

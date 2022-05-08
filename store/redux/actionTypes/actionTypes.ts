@@ -25,6 +25,12 @@ export interface GainUnitData {
   };
 }
 
+export const GAIN_LEVEL = 'GAIN_LEVEL';
+export interface GainUnitData {
+  type: typeof GAIN_LEVEL;
+  payload: number;
+}
+
 export const LOSS_UNIT = 'LOSS_UNIT';
 export interface LossUnitData {
   type: typeof LOSS_UNIT;

@@ -26,6 +26,7 @@ export const gainMoney = (payload: number) => (dispatch: Dispatch) => {
 };
 
 export const lossMoney = (payload: number) => (dispatch: Dispatch) => {
+  console.log('action lossMoney');
   return dispatch({
     payload,
     type: action.LOSS_MONEY,
@@ -33,10 +34,17 @@ export const lossMoney = (payload: number) => (dispatch: Dispatch) => {
 };
 
 export const gainUnit = (payload: any) => (dispatch: Dispatch) => {
-  console.log('action');
+  console.log('action gainUnit');
   return dispatch({
     payload,
     type: action.GAIN_UNIT,
+  });
+};
+export const gainLevel = (payload: string) => (dispatch: Dispatch) => {
+  console.log('action gainLevel');
+  return dispatch({
+    payload,
+    type: action.GAIN_LEVEL,
   });
 };
 export const lossUnit = (payload: UnitType) => (dispatch: Dispatch) => {

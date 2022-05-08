@@ -9,4 +9,7 @@ export type UnitType = {
   attackAbility: object;
   level: number;
   levelBonus: number;
+  levelCost: number;
+  levelCostMultiplier: number;
+  hp: number;
 };
