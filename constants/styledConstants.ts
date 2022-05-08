@@ -4,9 +4,9 @@ export const color = {
   black: '#000000',
   grey: '#808080',
   lightGrey: '#d6d6d6',
-  darkGrey: '#62605d',
+  hacky: '#7A8B65',
   green: '#21ba45',
-  red: '#db2828',
+  red: '#F24242',
   violet: '#2d1e5e',
   lightViolet: '#d646ca',
   dimgray: '#696969',
@@ -30,9 +30,7 @@ export const padding = {
   small: '5px',
 };
 
-export const borderRadius = {
-  small: '10px',
-};
+export const borderRadius = '10px';
 
 export const margin = {
   large: '15px',

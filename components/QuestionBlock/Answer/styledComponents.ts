@@ -5,7 +5,7 @@ export const AnswerContainer = styled.div`
   width: ${width.large};
   border: 2px solid white;
   position: relative;
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
 
   &::before {
     content: '';
@@ -42,7 +42,7 @@ export const AnswerText = styled.div`
 export const AnswerTextWrap = styled.div`
   color: inherit;
   background: ${background};
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
 `;
 
 export const AnswerProgressWrap = styled.div`

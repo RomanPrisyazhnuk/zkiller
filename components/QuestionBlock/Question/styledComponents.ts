@@ -6,7 +6,7 @@ export const QuestionContainer = styled.div`
   border: 2px solid ${color.white};
   position: relative;
   background: ${color.goldenrod};
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
 `;
 
 export const QuestionText = styled.h1`

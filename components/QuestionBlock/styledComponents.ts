@@ -14,6 +14,6 @@ export const AnswerGrid = styled(Grid)`
 
 export const QuestionContentBlock = styled.div`
   background: ${background};
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
   box-shadow: ${boxShadow};
 `;

@@ -5,7 +5,7 @@ export const CardContainer = styled.div`
   width: ${width.large};
   background-color: ${color.lightGrey};
   position: relative;
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
   cursor: pointer;
   margin-bottom: ${margin.large};
   box-shadow: 10px 5px 5px ${color.grey};

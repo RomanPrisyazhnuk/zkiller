@@ -1,6 +1,5 @@
 import { createAsyncActionType } from '../../../utils/helpers';
-import { UnitType } from '../../../models/Unit';
-
+// import { UnitType } from '../../../models/Unit';
 
 export const GAIN_MONEY = 'GAIN_MONEY';
 export interface GainMoney {

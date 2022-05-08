@@ -8,6 +8,6 @@ export const ArticleBlockContainer = styled.div`
 
 export const ArticleContentBlock = styled.div`
   background: ${background};
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
   box-shadow: ${boxShadow};
 `;

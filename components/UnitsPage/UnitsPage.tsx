@@ -1,6 +1,7 @@
 import React, { ReactElement } from 'react';
 import Header from '../Header/Header';
-import {mockArmy} from '../../mockData/unitMock'
+import Footer from '../Footer/Footer';
+// import {mockArmy} from '../../mockData/unitMock'
 import { ContentBlock, ContentWrapper } from '../../commonStyles/styledApp';
 // import SidebarSelf from '../SidebarSelf/SidebarSelf';
 // import { gender as genderConst } from '../../constants/enums';
@@ -17,16 +18,11 @@ const UnitsPage = (props: TProps): ReactElement => {
     <>
       <Header money={user.money}/>
       <ContentWrapper>
-        {/*<Sidebar>*/}
-        {/*  <SidebarSelf data={[]} />*/}
-        {/*</Sidebar>*/}
         <ContentBlock>
           <UnitsBlock army={user.army} />
         </ContentBlock>
-        {/*<Sidebar>*/}
-        {/*  <GenderImage src={isGirl ? '/static/imageWoman.webp' : '/static/imageMan.webp'} />*/}
-        {/*</Sidebar>*/}
       </ContentWrapper>
+      <Footer money={user.money}/>
     </>
   );
 };

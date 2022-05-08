@@ -19,7 +19,7 @@ export const SideBarWrapper = styled.div`
   width: ${width.large};
   padding: ${padding.medium};
   background: ${background};
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
   box-shadow: ${boxShadow};
 
   @media (max-width: ${screenSize.large}px) {
@@ -62,7 +62,7 @@ export const ImageCountBlock = styled.p`
   padding: 3px;
   min-width: 30px;
   height: 26px;
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
   font-size: 16px;
   background: ${color.orange};
   text-align: center;
@@ -78,7 +78,7 @@ export const ItemList = styled(List.Item)`
   align-items: center;
   position: relative;
   height: 210px;
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
 `;
 
 export const ShowMore = styled.div`

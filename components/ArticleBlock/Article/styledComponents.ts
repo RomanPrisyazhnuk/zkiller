@@ -4,7 +4,7 @@ import { borderRadius, color, fontSize, padding, width } from '../../../constant
 export const ArticleContainer = styled.div`
   width: ${width.large};
   position: relative;
-  border-radius: ${borderRadius.small}
+  border-radius: ${borderRadius}
   padding-bottom: ${padding.small};
 `;
 
@@ -29,7 +29,7 @@ export const ArticleTextWrap = styled.div`
 `;
 
 export const ArticleImage = styled.img`
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
   width: ${width.large};
 `;
 

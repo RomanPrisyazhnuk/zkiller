@@ -6,4 +6,7 @@ export type UnitType = {
   cost: number;
   count: number;
   damage: number;
+  attackAbility: object;
+  level: number;
+  levelBonus: number;
 };

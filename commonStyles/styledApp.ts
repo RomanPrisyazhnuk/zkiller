@@ -13,9 +13,7 @@ import {
 import { Grid } from 'semantic-ui-react';
 
 export const ContentWrapper = styled.div`
-  //width: ${width.large};
-  //display: flex;
-  //justify-content: space-between;
+  background-image: url(/static/background.jpg);
 `;
 
 export const Sidebar = styled.div`
@@ -27,14 +25,13 @@ export const Sidebar = styled.div`
 
 export const ContentBlock = styled.div`
   //width: ${width.small};
-  margin: ${margin.large} 0 0 0;
   padding-bottom: ${padding.small};
 `;
 
 export const CardImage = styled.img`
   width: ${width.large};
   height: 250px;
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
 `;
 
 export const CardContainer = styled.div`
@@ -45,7 +42,7 @@ export const CardContainer = styled.div`
 export const LinkWrap = styled.div`
   width: ${width.large};
   box-shadow: ${boxShadow};
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
   padding: ${padding.medium};
   cursor: pointer;
   @media (max-width: ${screenSize.small}px) {
@@ -59,7 +56,7 @@ export const CardTextWrap = styled.div`
   top: 170px;
   color: inherit;
   background: ${background};
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
 `;
 
 export const GenderImage = styled.img`
@@ -78,6 +75,7 @@ export const DescriptionText = styled.div`
   padding: ${padding.medium};
   color: ${color.black};
   margin-right: ${margin.small};
+  background-color: ${color.white};
 `;
 
 export const TextWrap = styled.div`
@@ -89,11 +87,13 @@ export const ContentBlockContainer = styled.div`
   padding: ${padding.medium} 0;
   display: flex;
   margin-bottom: ${margin.medium};
+  align-items: center;
+  justify-content: space-between;
 `;
 
 export const CardBlockContainer = styled.div`
   padding: ${padding.medium};
-  border-radius: ${borderRadius.small};
+  border-radius: ${borderRadius};
   box-shadow: ${boxShadow};
   margin-bottom: ${margin.large};
 `;
