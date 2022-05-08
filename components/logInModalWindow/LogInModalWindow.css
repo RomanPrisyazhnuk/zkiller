@@ -1,0 +1,27 @@
+.customModalWindow {
+  width: 421px !important;
+  height: 465px !important;
+  display: flex !important;
+  justify-content: center !important;
+  padding: 15px;
+}
+
+.border {
+  border: 1px solid #f05016 !important;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.5) !important;
+  border-radius: 10px !important;
+}
+
+.buttonBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.size {
+  width: 342px;
+  height: 50px;
+}

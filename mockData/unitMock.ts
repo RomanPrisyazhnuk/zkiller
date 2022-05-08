@@ -1,0 +1,68 @@
+import { ArmyType } from '../models/Army';
+import { army } from '../constants/enums';
+
+export const mockArmy:ArmyType  = {
+  [army.soldier]: {
+    id: army.soldier,
+    title: 'Особовий склад',
+    description: '',
+    imgSrc: null,
+    count: 1,
+    cost: 1000,
+    damage: 100,
+  },
+  [army.auto]: {
+    id: army.auto,
+    title: 'Автомобільна техніка',
+    description: '',
+    imgSrc: null,
+    cost: 50000,
+    count: 1,
+    damage: 100000,
+  },
+  [army.tank]: {
+    id: army.tank,
+    title: 'Танки',
+    description: '',
+    imgSrc: null,
+    cost: 1000,
+    count: 1,
+    damage: 100,
+  },
+  [army.copter]: {
+    id: army.copter,
+    title: 'Гелікоптери',
+    description: '',
+    imgSrc: null,
+    cost: 50000,
+    count: 1,
+    damage: 100000,
+  },
+  [army.bpla]: {
+    id: army.bpla,
+    title: 'БПЛА',
+    description: '',
+    imgSrc: null,
+    cost: 50000,
+    count: 1,
+    damage: 100000,
+  },
+  [army.plane]: {
+    id: army.plane,
+    title: 'Літаки',
+    description: '',
+    imgSrc: null,
+    cost: 1000,
+    count: 1,
+    damage: 100,
+  },
+  [army.ship]: {
+    id: army.ship,
+    title: 'Кораблі',
+    description: '',
+    imgSrc: null,
+    cost: 1000,
+    count: 1,
+    damage: 100,
+  },
+};

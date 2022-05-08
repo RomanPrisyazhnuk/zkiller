@@ -1,0 +1,137 @@
+{
+  "name": "zkiller",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "tsc",
+    "tslint": "tslint -p . -c tslint.json",
+    "tslint-fix": "tslint --fix -p . -c tslint.json",
+    "export": "next export",
+    "deploy": "next build && next export",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "firebase": "^8.2.2",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.20",
+    "next": "10.0.5",
+    "next-seo": "^4.17.0",
+    "prettier": "^2.0.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-facebook-login": "^4.1.1",
+    "react-google-login": "^5.1.10",
+    "react-icons": "^3.10.0",
+    "react-redux": "^7.2.0",
+    "react-semantic-toasts": "^0.6.5",
+    "react-share": "^4.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-promise-middleware": "^6.1.2",
+    "redux-thunk": "^2.3.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.2",
+    "styled-components": "^5.1.0",
+    "ts-react-google-login-component": "^1.1.8",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/js-cookie": "^2.2.6",
+    "@types/lodash": "^4.14.167",
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.7",
+    "@types/react-facebook-login": "^4.1.1",
+    "@types/react-redux": "^7.1.8",
+    "@types/react-test-renderer": "^16.9.2",
+    "@types/styled-components": "^5.1.0",
+    "react-test-renderer": "^16.13.1",
+    "tslint": "^6.1.2",
+    "tslint-config-airbnb": "^5.11.2",
+    "tslint-react": "^5.0.0",
+    "tslint-react-hooks": "^2.2.2",
+    "ts-jest": "^25.5.0",
+    "jest": "^26.0.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.1"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "printWidth": 120
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/*.(test|spec).(ts|tsx)"
+    ],
+    "globals": {
+      "ts-jest": {
+        "babelConfig": true,
+        "tsConfig": "jest.tsconfig.json"
+      }
+    },
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/mocks.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/mocks.js"
+    }
+  },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": true
+            }
+          ]
+        ]
+      },
+      "production": {
+        "presets": [
+          "next/babel"
+        ],
+        "plugins": [
+          [
+            "styled-components",
+            {
+              "ssr": true,
+              "displayName": false
+            }
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "production": {
+    "apiPrefix": "https://api.psychonicas.pp.ua/"
+  },
+  "test": {
+    "apiPrefix": "http://localhost:8000/"
+  },
+  "answer": {
+    "getAnswerById": "answers/getById",
+    "getAnswersByQuestionId": "answers/getByQuestionId",
+    "getAnswersByUserId": "answers/getByUserId",
+    "answers": "answers"
+  },
+  "question": {
+    "questions": "questions",
+    "getQuestionById": "questions/getById"
+  },
+  "category": {
+    "categories": "categories",
+    "getCategoryById": "categories/getById",
+    "getCategoryBySeoId": "categories/getBySeoId"
+  },
+  "article": {
+    "articles": "articles",
+    "getArticleById": "articles/getById",
+    "getArticleBySeoId": "articles/getBySeoId",
+    "getArticlesByUserId": "articles/getByUserId",
+    "getArticlesByCategory": "articles/getByCategory",
+    "getArticlesByGender": "articles/getByGender",
+    "getArticlesByGenderAndCategory": "articles/getByGenderAndCategory"
+  },
+  "user": {
+    "users": "users",
+    "getUserById": "users/getById",
+    "getUserBySeoId": "users/getBySeoId"
+  }
+}
