@@ -4,7 +4,7 @@ import { army } from '../constants/enums';
 export const mockArmy: ArmyType = {
   [army.soldier]: {
     id: army.soldier,
-    title: 'Особовий склад',
+    title: 'зубастики',
     description: '',
     imgSrc: '/static/army/soldier.webp',
     count: 0,

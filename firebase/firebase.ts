@@ -21,8 +21,6 @@ if (!firebase.apps.length) {
 
 const databaseRef = firebase.database().ref();
 export const questionsRef = databaseRef.child('Questions');
-export const articlesRef = databaseRef.child('Articles');
-export const authorsRef = databaseRef.child('Authors');
 export default firebase;
 
 export const getQuestions = () => {
