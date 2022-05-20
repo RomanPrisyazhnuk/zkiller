@@ -1,21 +1,12 @@
 import * as actionTypes from '../actionTypes/actionTypes';
-import _ from 'lodash';
 import { UserType } from '../../../models/User';
 import { mockUser } from '../../../mockData/userMock';
-export type UserDataType = {
-  id: number;
-  name: string;
-  avatar: string;
-  numberOfVictories: number;
-  access_token: number;
-  isLoading: boolean;
-};
 
 export type InitialStateType = UserType;
 
 const initialState: InitialStateType = mockUser;
 
-export default function userReducer(state: InitialStateType = initialState, action: any): InitialStateType {
+export default function userReducer(state: InitialStateType = initialState, action: actionTypes.AnyActionCustom): InitialStateType {
   switch (action.type) {
     case actionTypes.GAIN_MONEY:
       return { ...state, money: state.money + action.payload };
@@ -51,15 +42,16 @@ export default function userReducer(state: InitialStateType = initialState, acti
   // }
 }
 
-const gainUnit = (state: InitialStateType, action: any) => {
+const gainUnit = (state: InitialStateType, action: actionTypes.GainUnitDataType) => {
+  // @ts-ignore
   const unit = state.army[action.payload.id];
   unit.count = unit.count + action.payload.amount;
-  return { ...state, army: { ...state.army, [action.payload.id]:unit } };
+  return { ...state, army: { ...state.army, [action.payload.id]: unit } };
 };
 
-const gainLevel = (state: InitialStateType, action: any) => {
-  console.log(action.payload);
+const gainLevel = (state: InitialStateType, action: actionTypes.GainLevelDataType) => {
+  // @ts-ignore
   const unit = state.army[action.payload];
   unit.level = unit.level + 1;
-  return { ...state, army: { ...state.army, [action.payload]:unit } };
+  return { ...state, army: { ...state.army, [action.payload]: unit } };
 };

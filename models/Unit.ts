@@ -1,5 +1,5 @@
 export type UnitType = {
-  id: number;
+  id: string;
   title: string;
   description: string;
   imgSrc: string;

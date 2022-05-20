@@ -1,23 +1,20 @@
 import { createAsyncActionType } from '../../../utils/helpers';
-// import { UnitType } from '../../../models/Unit';
+
+export type AnyActionCustom = GainMoneyDataType | LossMoneyDataType | GainUnitDataType | LossUnitDataType | GainLevelDataType;
 
 export const GAIN_MONEY = 'GAIN_MONEY';
-export interface GainMoney {
+export interface GainMoneyDataType {
   type: typeof GAIN_MONEY;
-  payload: {
-    money: number;
-  };
+  payload: number;
 }
 
 export const LOSS_MONEY = 'LOSS_MONEY';
-export interface LossMoney {
+export interface LossMoneyDataType {
   type: typeof LOSS_MONEY;
-  payload: {
-    money: number;
-  };
+  payload: number;
 }
 export const GAIN_UNIT = 'GAIN_UNIT';
-export interface GainUnitData {
+export interface GainUnitDataType {
   type: typeof GAIN_UNIT;
   payload: {
     id: number;
@@ -26,13 +23,13 @@ export interface GainUnitData {
 }
 
 export const GAIN_LEVEL = 'GAIN_LEVEL';
-export interface GainUnitData {
+export interface GainLevelDataType {
   type: typeof GAIN_LEVEL;
   payload: number;
 }
 
 export const LOSS_UNIT = 'LOSS_UNIT';
-export interface LossUnitData {
+export interface LossUnitDataType {
   type: typeof LOSS_UNIT;
   payload: {
     id: number;
@@ -192,7 +189,6 @@ export interface SetArticlesByUserData {
   payload: object;
 }
 
-//Category
 export const GET_CATEGORIES = createAsyncActionType('GET_CATEGORIES');
 
 export interface GetCategoriesData {

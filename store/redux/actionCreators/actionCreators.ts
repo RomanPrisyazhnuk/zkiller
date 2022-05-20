@@ -26,22 +26,19 @@ export const gainMoney = (payload: number) => (dispatch: Dispatch) => {
 };
 
 export const lossMoney = (payload: number) => (dispatch: Dispatch) => {
-  console.log('action lossMoney');
   return dispatch({
     payload,
     type: action.LOSS_MONEY,
   });
 };
 
-export const gainUnit = (payload: any) => (dispatch: Dispatch) => {
-  console.log('action gainUnit');
+export const gainUnit = (payload: UnitType) => (dispatch: Dispatch) => {
   return dispatch({
     payload,
     type: action.GAIN_UNIT,
   });
 };
 export const gainLevel = (payload: string) => (dispatch: Dispatch) => {
-  console.log('action gainLevel');
   return dispatch({
     payload,
     type: action.GAIN_LEVEL,
@@ -53,7 +50,6 @@ export const lossUnit = (payload: UnitType) => (dispatch: Dispatch) => {
     type: action.LOSS_UNIT,
   });
 };
-
 
 export const setAuthStoreUserData = (type: string, token: string) => (dispatch: any) => {
   return dispatch({
@@ -74,7 +70,7 @@ export const setAuthStoreUserData = (type: string, token: string) => (dispatch: 
             description: 'Sorry for the inconvenience, we will fix it soon',
             animation: 'bounce',
             time: 5000,
-          })
+          }),
         ),
     },
   });
@@ -105,7 +101,7 @@ export const logOutStore = (token: number, id: number) => (dispatch: any) => {
           description: 'Sorry for the inconvenience, we will fix it soon',
           animation: 'bounce',
           time: 5000,
-        })
+        }),
       ),
     },
   });
@@ -151,7 +147,7 @@ export const getArticleAction: ActionCreator<Action> = (id: string) => ({
 
 export const getArticlesByUserAction: (id: string, seoId: string) => ActionCreator<Action> = (
   id: string,
-  seoId: string
+  seoId: string,
 ) => (dispatch: Dispatch) => {
   return dispatch({
     type: action.GET_ARTICLES_BY_USER.ACTION,
@@ -241,7 +237,7 @@ export const SetUpdateStoreUserData = (data: IDataProps) => {
               description: 'Sorry for the inconvenience, we will fix it soon',
               animation: 'bounce',
               time: 5000,
-            })
+            }),
           ),
       },
     });
@@ -289,7 +285,7 @@ export const getAuthorsAction: ActionCreator<Action> = () => ({
 
 export const getAuthorByIdAction: (id: string, articleSeoId: any) => ActionCreator<Action> = (
   id: string,
-  articleSeoId: any
+  articleSeoId: any,
 ) => (dispatch: Dispatch) => {
   return dispatch({
     type: action.GET_AUTHOR_BY_ID.ACTION,
@@ -313,7 +309,6 @@ export const setUserByArticlesAction: ActionCreator<Action> = (response, article
   },
 });
 
-//Category
 export const getCategoriesAction: ActionCreator<Action> = () => ({
   type: action.GET_CATEGORIES.ACTION,
   payload: {
@@ -346,7 +341,7 @@ export const getCategoryBySeoIdAction: ActionCreator<Action> = (seoId: string) =
 
 export const getArticlesByCategoryAction: (id: string, seoId: string) => ActionCreator<Action> = (
   id: string,
-  seoId: string
+  seoId: string,
 ) => (dispatch: Dispatch) => {
   return dispatch({
     type: action.GET_ARTICLES_BY_CATEGORY.ACTION,
