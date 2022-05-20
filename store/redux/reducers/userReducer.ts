@@ -16,6 +16,8 @@ export default function userReducer(state: InitialStateType = initialState, acti
       return gainUnit(state, action);
     case actionTypes.GAIN_LEVEL:
       return gainLevel(state, action);
+    case actionTypes.BATTLE_RESULT:
+      return { ...state, lastBattleResults: action.payload.lastBattleResult };
     default:
       return state;
   }

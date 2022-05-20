@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
+import ButtonAttack from './ButtonAttack/ButtonAttack';
 // import {mockArmy} from '../../mockData/unitMock'
 import { ContentBlock, ContentWrapper } from '../../commonStyles/styledApp';
 // import SidebarSelf from '../SidebarSelf/SidebarSelf';
@@ -10,19 +10,21 @@ import UnitsBlock from './UnitsBlock/UnitsBlock';
 
 type TProps = {
   user: UserType;
+  saveLastBattleResult: () => {}
+  gainMoney: () => {}
 };
 
 const UnitsPage = (props: TProps): ReactElement => {
-  const { user } = props;
+  const { user, saveLastBattleResult, gainMoney } = props;
   return (
     <>
-      <Header money={user.money}/>
+      <Header money={user.money} />
       <ContentWrapper>
         <ContentBlock>
           <UnitsBlock army={user.army} />
         </ContentBlock>
       </ContentWrapper>
-      <Footer user={user}/>
+      <ButtonAttack saveLastBattleResult={saveLastBattleResult} user={user} gainMoney={gainMoney} />
     </>
   );
 };

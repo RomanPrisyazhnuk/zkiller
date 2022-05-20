@@ -1,5 +1,6 @@
 import { UserType } from '../models/User';
-import { mockArmy } from './unitMock';
+import { mockArmy } from './armyMock';
+import { mockEnemyArmy } from './enemyArmyMock';
 
 export const mockUser:UserType = {
   id: 1,
@@ -8,4 +9,6 @@ export const mockUser:UserType = {
   imgSrc: '',
   army: mockArmy,
   money: 890000,
+  lastBattleResults: mockEnemyArmy,
+  totalResult: mockEnemyArmy,
 };

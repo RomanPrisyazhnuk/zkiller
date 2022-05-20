@@ -17,6 +17,7 @@ import { TArticlesByGenderAndCategory } from '../../../api/types';
 import { ArticleType } from '../../../models/Article';
 import { map } from '@firebase/util';
 import { UnitType } from '../../../models/Unit';
+import { EnemyArmyType } from '../../../models/Army';
 
 export const gainMoney = (payload: number) => (dispatch: Dispatch) => {
   return dispatch({
@@ -45,6 +46,13 @@ export const gainLevel = (payload: string) => (dispatch: Dispatch) => {
   });
 };
 export const lossUnit = (payload: UnitType) => (dispatch: Dispatch) => {
+  return dispatch({
+    payload,
+    type: action.LOSS_UNIT,
+  });
+};
+
+export const saveLastBattleResult = (payload: EnemyArmyType) => (dispatch: Dispatch) => {
   return dispatch({
     payload,
     type: action.LOSS_UNIT,

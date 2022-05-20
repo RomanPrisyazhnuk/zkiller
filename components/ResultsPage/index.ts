@@ -1,15 +1,13 @@
 import { connect } from 'react-redux';
-import { Action, Dispatch } from 'redux';
+import { Dispatch } from 'redux';
 import { AppState } from '../../store/rootReducer';
 import { gainMoney, saveLastBattleResult } from '../../store/redux/actionCreators/actionCreators';
-import { GetAuthorsData } from '../../store/redux/actionTypes/actionTypes';
-import UnitsPage from './UnitsPage';
+import ResultsPage from './ResultsPage';
 import { EnemyArmyType } from '../../models/Army';
 
 export type TPropsFromDispatch = {
-  getAuthors: () => Action<GetAuthorsData>;
-  saveLastBattleResult: () => {},
-  gainMoney: () => {},
+  saveLastBattleResult: (enemyArmy:EnemyArmyType) => {},
+  gainMoney: (money:number) => {},
 };
 
 const mapStateToProps = (state: AppState) => ({
@@ -21,4 +19,4 @@ const mapDispatchToProps = (dispatch: Dispatch): TPropsFromDispatch => ({
   gainMoney: (money: number) => dispatch(gainMoney(money)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(UnitsPage);
+export default connect(mapStateToProps, mapDispatchToProps)(ResultsPage);

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { borderRadius, boxShadow, color, width } from '../../constants/styledConstants';
+import { borderRadius, boxShadow, color, width } from '../../../constants/styledConstants';
 
 const footerHeight = 60;
 
@@ -18,7 +18,7 @@ export const BlockFooter = styled.div`
 
 export const FooterButton = styled.button`
   width: 95%;
-  background-color: ${color.red};
+  background-color: ${color.green};
   border-radius: ${borderRadius};
   height: ${footerHeight - 5}px;
   color: ${color.white};

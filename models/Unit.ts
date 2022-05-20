@@ -13,3 +13,14 @@ export type UnitType = {
   levelCostMultiplier: number;
   hp: number;
 };
+
+export type EnemyUnitType = {
+  id: string;
+  title: string;
+  description: string;
+  imgSrc: string;
+  count: number;
+  damage: number;
+  hp: number;
+  bounty: number;
+};

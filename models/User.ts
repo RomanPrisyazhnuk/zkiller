@@ -1,4 +1,4 @@
-import { ArmyType } from './Army';
+import { ArmyType, EnemyArmyType } from './Army';
 
 export type UserType = {
   id: number;
@@ -7,4 +7,6 @@ export type UserType = {
   imgSrc: string;
   army: ArmyType;
   money: number;
+  lastBattleResults: EnemyArmyType;
+  totalResult: EnemyArmyType;
 };

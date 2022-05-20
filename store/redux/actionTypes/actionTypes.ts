@@ -1,6 +1,7 @@
 import { createAsyncActionType } from '../../../utils/helpers';
+import { EnemyArmyType } from '../../../models/Army';
 
-export type AnyActionCustom = GainMoneyDataType | LossMoneyDataType | GainUnitDataType | LossUnitDataType | GainLevelDataType;
+export type AnyActionCustom = GainMoneyDataType | LossMoneyDataType | GainUnitDataType | LossUnitDataType | GainLevelDataType | BattleResultDataType;
 
 export const GAIN_MONEY = 'GAIN_MONEY';
 export interface GainMoneyDataType {
@@ -34,6 +35,14 @@ export interface LossUnitDataType {
   payload: {
     id: number;
     amount: number;
+  };
+}
+
+export const BATTLE_RESULT = 'BATTLE_RESULT';
+export interface BattleResultDataType {
+  type: typeof BATTLE_RESULT;
+  payload: {
+    lastBattleResult: EnemyArmyType;
   };
 }
 

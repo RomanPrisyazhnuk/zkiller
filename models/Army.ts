@@ -1,5 +1,5 @@
 import { army } from '../constants/enums';
-import { UnitType } from './Unit';
+import { EnemyUnitType, UnitType } from './Unit';
 
 export type ArmyType = {
   [army.soldier]: UnitType;
@@ -9,4 +9,14 @@ export type ArmyType = {
   [army.copter]: UnitType;
   [army.plane]: UnitType;
   [army.ship]: UnitType;
+};
+
+export type EnemyArmyType = {
+  [army.soldier]: EnemyUnitType;
+  [army.auto]: EnemyUnitType;
+  [army.tank]: EnemyUnitType;
+  [army.bpla]: EnemyUnitType;
+  [army.copter]: EnemyUnitType;
+  [army.plane]: EnemyUnitType;
+  [army.ship]: EnemyUnitType;
 };
